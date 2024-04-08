@@ -21,7 +21,7 @@ Libraries:
 
 # Useful Websites
 
-- [C++ Tutorial—W3Schools](http://url.link.goes.here](https://www.w3schools.com/cpp/)
+- [C++ Tutorial—W3Schools](https://www.w3schools.com/cpp/)
 - [C++ STL Containers—CPlusPlus](https://cplusplus.com/reference/stl/)
 
 # Future Work
