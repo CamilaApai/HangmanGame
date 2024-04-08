@@ -1,32 +1,31 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This project revolves around creating a hangman game using C++. In this game, a word is randomly selected by the program, and the user's task is to guess it. The main objective is to provide an interactive gaming experience within a C++ environment, showcasing the integration with Visual Studio Code and GitHub.
 
-{Provide a description of the software that you wrote to demonstrate the C++ language.}
-
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
+In the hangman game, players guess letters to uncover a hidden word. Correct guesses reveal letters in the word, while incorrect ones decrease the remaining attempts left at guessing. With limited attempts, players must guess the word correctly to avoid losing the game.
 
 [Software Demo Video](http://youtube.link.goes.here)
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+- Windows 10
+- Git / GitHub
+- Visual Studio Code
+- C++
 
-{Describe the programming language that you used and any libraries.}
+Libraries:
+
+- Iostream
+- Vector
+- Algorithm
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [C++ Tutorial—W3Schools](http://url.link.goes.here](https://www.w3schools.com/cpp/)
+- [C++ STL Containers—CPlusPlus](https://cplusplus.com/reference/stl/)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
+- Add error handling for user input
+- Add a visual representation of the hangman.
+- Add different word categories for the user to choose from.
