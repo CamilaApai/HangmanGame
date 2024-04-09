@@ -9,7 +9,7 @@
 class Game {
 public:
     virtual void StartGame() = 0; // Function to start the game
-    virtual bool CheckLetter(char guessLetter) = 0; // Function to check if the guessed letter is correct
+    virtual bool CheckLetter(char guessLetter) = 0; // Function to check if the guessed letter is  correct
 };
 
 // Implement the HangmanGame class derived from the Game class
