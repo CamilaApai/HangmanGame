@@ -2,12 +2,14 @@
 #include <iostream> 
 #include <vector>
 #include <algorithm>
+#include <ctime>
+#include <cstdlib>
 
-// Define the Game interface with two functions: StartGame and CheckLetter
+// Define the Game interface with two pure virtual functions: StartGame and CheckLetter
 class Game {
 public:
-    virtual void StartGame() = 0; // Function to start the game
-    virtual bool CheckLetter(char guessLetter) = 0; // Function to check if the guessed letter is correct
+    virtual void StartGame() = 0; // Pure virtual function to start the game
+    virtual bool CheckLetter(char guessLetter) = 0; // Pure virtual function to check if the guessed letter is correct
 };
 
 // Implement the HangmanGame class derived from the Game class
@@ -23,8 +25,18 @@ private:
     bool wordGuessed = false; // Indicates whether the word has been guessed
 
 public:
-    // Constructor to initialize the HangmanGame object with a secret word
-    HangmanGame(std::string word) : secretWord(word) {
+    // Constructor to initialize the HangmanGame object with a vector of possible words
+    HangmanGame(const std::vector<std::string>& words) {
+        if (!words.empty()) { // Check if the provided vector of words is not empty
+            srand(time(0)); // Initialize the random number generator using the current time
+            int index = rand() % words.size(); // Generate a random index number within the range of the vector size
+            secretWord = words[index]; // Assign the randomly selected word from the vector to the secretWord variable
+        }
+        else {
+            std::cerr << "Error: Empty word list." << std::endl;
+            return;
+        }
+
         std::transform(secretWord.begin(), secretWord.end(), secretWord.begin(), ::toupper); // Convert the secret word to uppercase, so the program will not identify the same letter as different answers depending on whether it is lowercase or uppercase.
 
         // Initialize the revealedWord vector with underscores for letters and preserve non-letter characters
@@ -41,7 +53,7 @@ public:
     void StartGame() override {
         // Prints introducing lines of text for the user to the screen.
         std::cout << "Welcome to Hangman!" << std::endl;
-        std::cout << "Try to guess the secret word." << std::endl;
+        std::cout << "Try to guess the secret animal." << std::endl;
         std::cout << "You have " << attempts << " attempts." << std::endl;
 
         // Continue the game while the word has not been guessed and there are still attempts left
@@ -117,7 +129,8 @@ public:
 
 // Main function to create a HangmanGame object and start the game
 int main() {
-    HangmanGame game("technology"); // Create a HangmanGame object with the secret word "technology"
+    std::vector<std::string> words = {"hippopotamus", "elephant", "rhinoceros", "peacock", "parrot", "cat", "porcupine", "crocodile", "hornet", "penguin"};
+    HangmanGame game(words); // Create a HangmanGame object with a list of possible words
     game.StartGame(); // Start the game
     return 0;
 }
