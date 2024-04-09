@@ -4,7 +4,7 @@ This project revolves around creating a hangman game using C++. In this game, a 
 
 In the hangman game, players guess letters to uncover a hidden word. Correct guesses reveal letters in the word, while incorrect ones decrease the remaining attempts left at guessing. With limited attempts, players must guess the word correctly to avoid losing the game.
 
-[Software Demo Video][(https://youtu.be/UQeJKz1y1ew)]
+[Software Demo Video][https://youtu.be/UQeJKz1y1ew]
 
 # Development Environment
 
