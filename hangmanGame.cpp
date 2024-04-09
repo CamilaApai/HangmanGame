@@ -5,11 +5,11 @@
 #include <ctime>
 #include <cstdlib>
 
-// Define the Game interface with two pure virtual functions: StartGame and CheckLetter
+// Define the Game interface with two functions: StartGame and CheckLetter
 class Game {
 public:
-    virtual void StartGame() = 0; // Pure virtual function to start the game
-    virtual bool CheckLetter(char guessLetter) = 0; // Pure virtual function to check if the guessed letter is correct
+    virtual void StartGame() = 0; // Function to start the game
+    virtual bool CheckLetter(char guessLetter) = 0; // Function to check if the guessed letter is correct
 };
 
 // Implement the HangmanGame class derived from the Game class
